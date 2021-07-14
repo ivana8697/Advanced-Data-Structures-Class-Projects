@@ -1,0 +1,10 @@
+Ivanas-MacBook-Pro-2:src Ivana$ javac -cp ../lib/algs4.jar *.java
+Ivanas-MacBook-Pro-2:src Ivana$ java -cp ../lib/algs4.jar:. ShortestPath ../bostonmetro.csv
+calling fillGraph...
+orig graph #edges =301
+after dedup, graph #edges =163
+From JFK to Bowdoin: Red: JFK/UMass, Andrew, Broadway, SouthStation, DowntownCrossing, ParkStreet, Green: ParkStreet, GovernmentCenter, Blue: GovernmentCenter, Bowdoin, 
+
+From JFK to Wonderland: Red: JFK/UMass, Andrew, Broadway, SouthStation, Silver: SouthStation, Courthouse, WorldTradeCtr, SilverLineWay, Airport, Blue: Airport, WoodIsland, OrientHeights, SuffolkDowns, Beachmont, RevereBeach, Wonderland, 
+
+Ivanas-MacBook-Pro-2:src Ivana$ 
