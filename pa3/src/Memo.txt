@@ -1,0 +1,56 @@
+
+Late days used: 1
+
+1. 
+
+	I had a lot of trouble with the recursion of ChooseMove, I was overthinking it
+	a lot but it really helped me to just draw out all the steps and add all these
+	print statments that let me see what each step was doing and to visually see
+	where the program was going. I honestly just got stuck with a small typo in my
+	base case where it checked to see if its empty/a leaf. If I didnt spend a lot
+	of time on a small bug then it would have just been pretty similar to the 
+	chooseMove of tictactoe. It is pretty easy here since when you know theres 0 on
+	the board then whoever is the side going through the program wins since they 
+	cant take any stars. When going in the loop of how many stars to take you just
+	simply subtract that amount of stars from the row and then add the amount back after 
+	seeing what the opponent will do so pretty simple. With all the print outs I used, I 
+	learned a lot about the steps of the program and how it jumped around, which isnt so 
+	apparent from just reading the code so that helped me kinda break up the steps. 
+
+
+2. 
+
+	Since we have a winner or loser each time the game has 2 possible outcomes unlike 
+	Tic Tac Toe where there are 3 possible outcomes. On this particular game board of 
+	Nim we have 5 + 3 + 1 = 9 stars, each player can take a minimum of 1 star per turn
+	so the longest case would be 9 moves in a game. So two possible outcomes and max of
+	9 moves would mean the upper bound would be 2^9 for this game of Nim. the height of 
+	the game tree would be 9. 
+
+
+3. 
+
+	The positioin value in Tic Tac Toe can be 0, 1, or 3 since there are 3 possible outcomes.
+	you get the position value by going down the game tree and seeing the possibilities. If you
+	have the highest chance of winning and youre the computer the value is 3, if there is a 
+	highest chance you will end in a draw the position value is, or if the highest chance is 
+	to lose the position value is 0. If in Nim the move row 0 take 3 stars has a high chance of
+	winning the game you can say it has a value of 3, if it is even chance of getting a win or 
+	losing then the position value can be 2 or 1 etc. and if there is a higher chance to lose
+	then the position value can be 0. If the initial position is a value like 3 in TTT then that
+	means that side is sure to win if they play properly, so for the computer its a guaranteed win.
+	Same in Nim, if the position is 3 then there is a guaraantee the computer will win. 
+
+
+4. 
+
+	We can implement a similar technique to what was done for Tic Tac Toe and we use values like 0 for
+	likley loss, 1 for 50/50 shot and 3 for likley win. It would use minimax search to use the leaf
+	values to determine the values later in the game tree. It would basically be able to split up the
+	large recursion used into smaller recursive chunks because you save the results as you go along
+	and reuse them so you dont have to star over again. So the position class would have the position constructor copy the board and equals function to check for type and compare to what we have, and
+	a hashcode function to get the hashvalue of the board. 
+
+
+	
+

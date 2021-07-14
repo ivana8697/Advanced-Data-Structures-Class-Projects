@@ -1,0 +1,77 @@
+1.	I used Sublime text on my mac and did most of my testing in the umb server and also in my mac terminal. 
+	Since Mac terminal works just like the umb server there werent many issues with moving things. 
+
+2.	With N lines and N users but each line has its own amount of entires and some entires can have many users 	  and some can even be none at all. assumming the worst case it would be about O(N^2)
+
+3.
+
+	compile/run of xref and Wtokenizer:
+
+		ivana86@itserver6:~/cs310/pa1$ cd src
+		ivana86@itserver6:~/cs310/pa1/src$ javac -d ../bin cs310/*.java
+		ivana86@itserver6:~/cs310/pa1/src$ cd ../bin
+		ivana86@itserver6:~/cs310/pa1/bin$ java cs310.Xref < BankAccount.java
+		Account: 1
+		BankAccount: 1, 3
+		String: 3, 10
+		_id: 3, 3
+		amt: 5, 6
+		bal: 3
+		balance: 5, 7, 11
+		class: 1
+		deposit: 6
+		getBalance: 7
+		id: 3, 9
+		implements: 1
+		int: 3, 3, 5, 5, 6, 7, 9, 11
+		name: 10
+		nm: 3
+		private: 9, 10, 11
+		public: 1, 3, 5, 6, 7
+		return: 5, 7
+		void: 6
+		withdraw: 5
+
+
+	compile/run of update to xref using Regex:
+
+		ivana86@itserver6:~/cs310/pa1$ cd src
+		ivana86@itserver6:~/cs310/pa1/src$ javac -d ../bin cs310/*.java
+		ivana86@itserver6:~/cs310/pa1/src$ cd ../bin
+		ivana86@itserver6:~/cs310/pa1/bin$ java cs310.Xref < BankAccount.java
+		Account: 1
+		BankAccount: 1, 3
+		String: 3, 10
+		_id:
+		amt: 5, 6
+		bal: 3
+		balance: 5, 7, 11
+		class: 1
+		deposit: 6
+		getBalance: 7
+		id: 3, 9
+		implements: 1
+		int: 3, 3, 5, 5, 6, 7, 9, 11
+		name: 10
+		nm: 3
+		private: 9, 10, 11
+		public: 1, 3, 5, 6, 7
+		return: 5, 7
+		void: 6
+		withdraw: 5
+
+
+	Display of directories:
+
+		ivana86@itserver6:~/cs310/pa1$ du
+		32	./src/cs310
+		60	./src
+		20	./bin/cs310
+		32	./bin
+		108	.
+
+4.	Lets assume that each line has a max of 100 char and for the worst case if 
+	every line is made up of 100 char then we need N * 100 * 2 bytes 
+	or N * 200 bytes max. So O(N) * 200 would still be a run time of O(N). 
+
+

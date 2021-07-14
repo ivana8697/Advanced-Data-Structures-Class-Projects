@@ -1,0 +1,72 @@
+
+1. 
+
+It was hard for me to visualize what we were doing at first especially because 
+we were now using an array of linkedLists with nodes instead of an array of nodes,
+So it took me a bit of time trying to figure out the best way to reach and change 
+what I needed. It was also a bit difficult to understand what a mask was but now 
+I understand how it works and how it shows just the last however-many bits.
+The bitwise AND was also something that I realized that is a clever way to 
+return the the original value since it compared to 11111111111. I ran into some issues
+with resize regarding updating and dealing with threshhold. I also just had some
+issues with java syntax since I was a bit confused on how to deal with each LinkedList 
+and access it but I was able to figure it out for the most part. Overall I really learned
+a lot more about how hashing works and the procedure it goes through when adding or 
+searching a key-value. I think Hashing has lots of good uses and is a pretty efficient
+system to use when you need to do lots of searching.
+
+
+2. 
+
+I looked at the API to see what methods need to remain public and I was able to see
+that the other methods used like putVal were helper methods that the public methods
+used but only methods within HashMap should use so they are made private.
+
+
+3.
+
+keySet allows us to see the keys of the hashmap by returning them in a set, so we can
+print out keySet and all the keys are printed and displayed for us to view. 
+
+
+4.
+
+Ivanas-MacBook-Pro-2:bin Ivana$ java cs310.client.TestMapPerf 10000000 words
+Starting...
+reading words
+Found 99171 lines
+Map type: java.util.HashMap
+      case         ms      #gets   time/get(us)
+         0        188   10000000          0.019
+         1        348   10000000          0.035
+         2        363   10000000          0.036
+
+reading words
+Found 99171 lines
+Map type: java.util.TreeMap
+      case         ms      #gets   time/get(us)
+         0       1421   10000000          0.142
+         1       1906   10000000          0.191
+         2       2910   10000000          0.291
+
+reading words
+Found 99171 lines
+testMap passed load test
+reading words
+Found 99171 lines
+Map type: cs310.util.HashMap4
+      case         ms      #gets   time/get(us)
+         0        320   10000000          0.032
+         1        667   10000000          0.067
+         2        776   10000000          0.078
+
+It does so more or less but the JDK Hashmap is about half the time when we got to bigger 
+N values. Switching to LinkedList did hurt performance slightly. Obviously HashMap is 
+faster than TreeMap. 
+
+
+
+
+
+
+
